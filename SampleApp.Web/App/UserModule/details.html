@@ -1,0 +1,40 @@
+﻿<br/>
+<h2>{{action}} User</h2>
+<form name="form" class="form-horizontal">
+    <div class="control-group" ng-class="{error: form.Name.$invalid}">
+        <label class="control-label" for="Name">Name</label>
+        <div class="controls">
+            <input type="text" ng-model="item.Name" id="Name" name="Name" ng-required="true" placeholder="">
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error: form.EmailAddress.$invalid}">
+        <label class="control-label" for="EmailAddress">Email Address</label>
+        <div class="controls">
+            <input type="email" ng-model="item.EmailAddress" id="EmailAddress" name="EmailAddress" ng-required="true" placeholder="">
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error: form.AddressLine1.$invalid}">
+        <label class="control-label" for="AddressLine1">Address Line 1</label>
+        <div class="controls">
+            <input type="text" ng-model="item.AddressLine1" id="AddressLine1" name="AddressLine1" ng-required="true" placeholder="">
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error: form.AddressLine2.$invalid}">
+        <label class="control-label" for="AddressLine2">Address Line 2</label>
+        <div class="controls">
+            <input type="text" ng-model="item.AddressLine2" id="AddressLine2" name="AddressLine2" ng-required="true" placeholder="">
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error: form.PostCode.$invalid}">
+        <label class="control-label" for="PostCode">Post Code</label>
+        <div class="controls">
+            <input type="text" ng-model="item.PostCode" id="PostCode" name="PostCode" ng-required="true" placeholder="">
+        </div>
+    </div>
+    <div class="form-actions">
+        <button ng-click="save()" class="btn btn-primary">
+            {{action}}
+        </button>
+        <a href="#/" class="btn">Cancel</a>
+    </div>
+</form>
