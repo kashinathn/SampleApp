@@ -7,16 +7,16 @@ namespace SampleApp.Maps
     {
         public UserMap()
         {
-            //Schema("dbo");
+            Schema("dbo");
             //Table("User");
             DynamicInsert();
             Id(x => x.Id).Column("UserId");
-            Map(x => x.Name);
-            Map(x => x.EmailAddress);
-            Map(x => x.AddressLine1);
-            Map(x => x.AddressLine2);
-            Map(x => x.PostCode);
-            Map(x => x.CreatedDate);
+            Map(x => x.Name).Not.Nullable();
+            Map(x => x.EmailAddress).Not.Nullable();
+            Map(x => x.AddressLine1).Not.Nullable();
+            Map(x => x.AddressLine2).Not.Nullable();
+            Map(x => x.PostCode).Not.Nullable();
+            Map(x => x.CreatedDate).Not.Nullable().Default("getdate()").Generated.Insert();
         }
     }
 }
